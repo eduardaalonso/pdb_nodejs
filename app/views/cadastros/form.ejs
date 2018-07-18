@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <form action="/central/form" method="post">
+            <div class="row">
+                <a href="">Voltar a listagem</a>
+            </div>
+            <div class="row">
+                <h3>Dados pessoais</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" >
+                </div>
+                <div class="col-md-4">
+                    <label for="crm">CRM</label>
+                    <input type="text" class="form-control" name="crm" >
+                </div>
+                <div class="col-md-4">
+                    <label for="data_nascimento">Data de Nascimento</label>
+                    <input type="date" class="form-control" name="data_nascimento" >
+                </div>
+            </div>
+            <div id="contato">
+                <div class="row">
+                    <h3>Dados para Contato</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="endereco_1">Endereco</label>
+                        <input type="text" class="form-control" name="endereco_1" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="telefone_1">Telefone</label>
+                        <input type="text" class="form-control" name="telefone_1" >
+                    </div>
+                </div>
+            </div>
+            <div id="especialidades">
+                <div class="row">
+                    <h3>Especialidades</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="especialidades">Especialidades</label>
+                        <input type="text" class="form-control" name="especialidades" >
+                    </div>
+                    <div class="col-md-4">
+                        <label for="enfases">ênfase</label>
+                        <input type="text" class="form-control" name="enfases" >
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-success" id="submit">Cadastrar</button>
+        </form>
+    </div>
+   
+</body>
+<script id="template-novo-endereco" type="text/template">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="endereco">Endereco</label>
+            <input type="text" class="form-control" name={{endereco-name}} >
+        </div>
+        <div class="col-md-4">
+            <label for="telefone">Telefone</label>
+            <input type="tel" class="form-control" name={{telefone-name}} >
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-danger" id="remover-endereco">Deletar este dado para contato</button>
+        </div>
+    </div>
+</script>
+<script src="js/main.js"></script>
+</html>

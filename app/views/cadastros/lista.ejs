@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+        <h1>Central de Bem Estar</h1>
+        <h2>Médicos Cadastrados</h2>
+    </head>
+    <body>
+        <table border="1px">
+            <tr>
+                <td>ID</td>
+                <td>CRM</td>
+                <td>NOME</td>
+                <td>DATA DE NASCIMENTO</td>
+                <td>TELEFONE 1</td>
+                <td>TELEFONE 2</td>
+                <td>ENDEREÇO 1</td>
+                <td>ENDEREÇO 2</td>
+                <td>ESPECIALIDADE</td>
+                <td>ÊNFASE</td>
+            </tr>
+                <%for(var i=0;i<lista.length;i++) {%>
+                    <tr>
+                        <td><%=lista[i].id%></td>
+                        <td><%=lista[i].crm %></td>
+                        <td><%=lista[i].nome %></td>
+                        <td><%=lista[i].data_nascimento %></td>
+                        <td><%=lista[i].telefone_1%></td>
+                        <td><%=lista[i].telefone_2%></td>
+                        <td><%=lista[i].endereco_1%></td>
+                        <td><%=lista[i].endereco_2%></td>
+                        <td><%=lista[i].especialidades%></td>
+                        <td><%=lista[i].enfases%></td>
+                    </tr>
+                <%}%>
+        </table>
+    </body>
+</html>
+
+
